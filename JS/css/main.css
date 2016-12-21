@@ -1,0 +1,10 @@
+.mainTitle {
+	text-align:center;
+}
+.mainTitle .logo {
+	width:100px;
+	vertical-align:middle;
+}
+.mainTitle .text {
+	vertical-align:middle;
+}
