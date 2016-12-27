@@ -1,1079 +1,251 @@
-// var i = 0;
+// 1. Написать условие которое будет истинно только если X это строка, Y равен 10, а Z больше или равно Y.
+// var X, Y, Z;
+// console.log(/*условие*/);
+// *************************************************************************
 
-// while(i < 10) {
-	// i++;
-	// console.log(i);
+// var X = "flame", Y = 10, Z =14;
+
+// if (typeof(X) === "string" && Y === 10 && Z >= Y) {
+	// console.log('typeof(X) === "string" && Y === 10 && Z >= Y');
 // }
 
-// var i = 0;
+// *************************************************************************
+// 2. Написать условие которое будет истинно только если X больше 10 или Y и Y является числом или Z кратно 2.
+// var X, Y, Z;
+// console.log(/*условие*/);
+// *************************************************************************
 
-// do {
-	// i++;
-	// console.log(i);
-// } while(i < 10);
+// var X = 14, Y = 2, Z = 18;
 
-// var i = 0;
+// if ((X > 10 || X > Y) && ((typeof(Y) === "number") && !(Z % 2))) {
+	// console.log(((X > 10 || X > Y) && ((typeof(Y) === "number") && !(Z % 2))));
+// }
 
-// do { // runs at least once
-	// i++;
-	// console.log(i);
-// } while(false);
+// *************************************************************************
+// 3. Написать условие которое будет истинно только если сумма X и Y кратна 10, а среднее арифметическое X, Y и Z умноженное на 2 больше 100.
+// var X, Y, Z;
+// console.log(/*условие*/);
+// *************************************************************************
 
-// for(var i = 0; i < 10; i++) {
-	// console.log(i);
+// var X = 614, Y = 236, Z = 69;
+
+// if( !((X + Y)%10 ) && ( 2*(X + Y + Z)/3 ) > 100 )          {
+	// console.log('((X + Y)%10 ) && ( 2*(X + Y + Z)/3 ) > 100 ');
+// }
+
+// *************************************************************************
+// 4. Написать тернарный оператор который будет записывать в переменную X значение Y, если оно кратно трём или значение Z если оно больше Y или сумму Y и Z.
+// var X, Y, Z;
+// var X = /* решение */;
+// console.log(X);
+// *************************************************************************
+
+// var X = 1, Y = 2, Z = 3;
+// var X = !(Y % 3)/* if */ ? /* than */ Y : /* иначе */ Z /* if */ ? /* than */ Z > Y : /* иначе */ Y + Z;
+// console.log(X);
+
+// *************************************************************************
+// 5. Написать условие, которое запишет в переменную X первое значение среди переменных Y, Z, которое не число или null используя if...else;
+// var X, Y, Z;
+// / * Ваше решение */
+// console.log(X);
+// *************************************************************************
+// формулировка "не число или null" позволяет двояко трактовать условие:
+//1. не число и не null
+//2. не число или является null
+// я решил по смыслу первого варианта
+// *************************************************************************
+
+// var X = 1, Y = 2, Z = 3;
+
+// if( typeof(Y) != 'number' && typeof(Y) != 'null' ) {
+	// X = Y;
+// }else if(typeof(Z) != 'number' && typeof(Z) != 'null') {
+	// X = Z;
+// }else{
+	// X = 'var Y = "number" or var Y = "null". var Z = "number" or var Z = "null",';
+// }
+
+// console.log(X);
+
+// *************************************************************************
+// 6. Написать условие которое будет истинно только если Y не false и записать в перемененную X true в виде строки или Z используя if...else.
+// var X, Y, Z;
+// / * Ваше решение */
+// console.log(X);
+// *************************************************************************
+
+// var X = 1, Y = 2, Z = 3;
+
+// if ( Y != false) {
+	// X = "true";
+// }else {
+	// X = Z;
+// }
+
+// console.log(X);
+
+// *************************************************************************
+// 7. Написать условие, которое запишет в переменную X, значение Y если оно равно 0 или false или undefined или null или значение Z приведённое к числу switch...case.
+// var X, Y, Z;
+// / * Ваше решение */
+// console.log(X);
+// *************************************************************************
+
+// var X = 1, Y = 0, Z = '3';
+
+// switch(Y) {
+	// case 0:
+	// X = Y;
+	// case false:
+	// X = Y;
+	// case undefined:
+	// X = Y;
+	// case null:
+	// X = Y;
+	// break;
+	// default:
+	// X = +Z;
 	
 // }
 
-// for(var i = 10; i > 5; i--) {
-	// console.log(i);
-// }
+// console.log(X);
 
-// for(var i = 10; i > 0; i -= 2) {
-	// console.log(i);
-// }
+// *************************************************************************
+// 8. Сделать то же самое но без оператора break; в тех кейсах, где он не нужен.
+// var X, Y, Z;
+// / * Ваше решение */
+// console.log(X); 
+// *************************************************************************
 
+// *************************************************************************
+// 9. Дан массив arr, в котором могут храниться разнотипные данные, пройтись по массиву всеми известными циклами(в разных решениях) и получить по окончании работы цикла новый массив из тех значений который при приведении к boolean дают true.
+// var arr = ["", "0", 0, true, undefined, NaN, 234, "ololo", -1, [], {}];
+// /* ваш код */
+// console.log(/* ваш новый массив */);
+// *************************************************************************
+// 9.while
 
-// var i = 10;
-
-// for(; i > 5; i--) {
-	// console.log(i);
-// }
-
-
-// var i = 10;
-// for(; i > 5;) {
-	// i--;
-	// console.log(i);
-// }
-
-// var i = 10;
-
-// бесконечный цикл
-// for(;;) {
-	// i--;
-	// console.log(i);
-// }
-
-// var i = 0;
-// while (true) {
-	// console.log(i);
-	// i++;
-	// if (i > 10) {
-		// break;
+// var arr = ["", "0", 0, true, undefined, NaN, 234, "ololo", -1, [], {}];
+// var i = 0, j = 0, a = 0;
+// var trueSortArr = [];
+// while( i <= arr.length) {
+	// if( !!arr[i] == true) {
+		// trueSortArr[j] = arr[i];
+		// console.log(trueSortArr[j]);
+		// j++;
 	// }
-// }
-
-// var i = 0;
-// while (i < 100) {
-	// console.log(i);
 	// i++;
-	// if (i > 10) {
-		// break;
-	// }
 // }
 
+// *************************************************************************
+// 9.do while
 
-
-// var i = 0;
+// var arr = ["", "0", 0, true, undefined, NaN, 234, "ololo", -1, [], {}];
+// var i = 0, j = 0;
+// var trueSortArr = [];
 // do {
-	// console.log(i);
-	// i++;
-	// if (i > 10) {
-		// break;
+	// if( !!arr[i] == true) {
+		// trueSortArr[j] = arr[i];
+		// console.log(trueSortArr[j]);
+		// j++;
 	// }
-// } while (i < 100);
+	// i++;
+// }while( i < arr.length)
 
+// *************************************************************************
+// 9.for
 
-// for (var i = 0; i < 100; i++) {
-	// console.log(i);
-	// if (i > 10) {
-		// break;
+// var arr = ["", "0", 0, true, undefined, NaN, 234, "ololo", -1, [], {}];
+// var i = 0, j = 0, a = 0;
+// var trueSortArr = [];
+// for(; i <= arr.length; i++) {
+	// if( !!arr[i] == true) {
+		// trueSortArr[j] = arr[i];
+		// console.log(trueSortArr[j]);
+		// j++;
 	// }
 // }
 
-// var i = 0;
+// *************************************************************************
+// 10. Дан массив arr, в котором могут храниться разнотипные данные, пройтись по массиву всеми известными циклами(в разных решениях) и получить по окончании работы цикла новый массив из тех значений которые являются числом или строкой которую можно к нему привести, а также являются положительными. var arr = ["0", 0, undefined, 234, 15, -29, "-287", "", [1, 2, 3], {key: "value"}, "test", false];
+// console.log(/* ваш новый массив */);
+// *************************************************************************
+// 10. while
 
-// while (i < 10) {
-	// i++;
-	// if (i > 5 && i < 8) {
-		// continue;
+// var arr = ["0", 0, undefined, 234, 15, -29, "-287", "", [1, 2, 3], {key: "value"}, "test", false];
+// var i = 0, j = 0;
+// var positiveNumberArr = [];
+// while( i <= arr.length) {
+	// if( typeof(+arr[i]) == 'number' && (+arr[i]) > 0) {
+		// positiveNumberArr[j] = +arr[i];
+		// console.log( + positiveNumberArr[j]);
+		// j++;
 	// }
-	// console.log(i);
+	// i++;
 // }
 
-// var i = 0;
+// *************************************************************************
+// 10. do while
 
+// var arr = ["0", 0, undefined, 234, 15, -29, "-287", "", [1, 2, 3], {key: "value"}, "test", false];
+// var i = 0, j = 0;
+// var positiveNumberArr = [];
 // do {
+	// if( typeof(+arr[i]) == 'number' && (+arr[i]) > 0) {
+		// positiveNumberArr[j] = +arr[i];
+		// console.log(+ positiveNumberArr[j]);
+		// j++;
+	// }
 	// i++;
-	// if (i > 5 && i < 8) {
-		// continue;
-	// }
-	// console.log(i);
-// } while (i < 10);
+// } while( i < arr.length)
 
+// *************************************************************************
+// 10. for
 
-// var i = 20;
-
-// do {
-	// i++;
-	// if (i > 5 && i < 8) {
-		// continue;
-	// }
-	// console.log(i);
-// } while (i < 10);
-
-
-// for (var i = 0; i < 10; i++) {
-	// if (i > 5 && i < 8) {
-		// continue;
-	// }
-	// console.log(i);
-// }
-
-// нельзя использовать break и continue в тернарных операторах, которые обязаны вернуть значение (а они просто прерывают работу и не возвращают ничего)
-// for (var i = 0; i < 10; i++) {
-	// i > 5 && i < 8 ? continue : null;
-	// console.log(i);
-// }
-
-// var i = 0;
-// outerFor: while(true) {
-	// console.log("outer i =", i);
-	// while (true) {
-		// i++;
-		// console.log("inner i =", i);
-		// if (i > 10) {
-			// break outerFor;
-		// }
+// var arr = ["0", 0, undefined, 234, 15, -29, "-287", "", [1, 2, 3], {key: "value"}, "test", false];
+// var i = 0, j = 0;
+// var positiveNumberArr = [];
+// for( ; i <= arr.length; i++) {
+	// if( typeof(+arr[i]) == 'number' && (+arr[i]) > 0) {
+		// positiveNumberArr[j] = +arr[i];
+		// console.log(+ positiveNumberArr[j]);
+		// j++;
 	// }
 // }
 
+// *************************************************************************
+// 11. Сгенерировать массив, который состоит из чисел от 1 до 99, каждое и рассортировать результаты в 3 равных массивов, которые будут чередовать значения исходного массива, тоесть [1], [2], [3].
+// var baseArray = [];
+// /* код вашего генератора */
+// var newArray1 = [];
+// var newArray2 = [];
+// var newArray3 = [];
+// /* код вашего сортировщика */
+// console.log(newArray1 , newArray2, newArray3 );
+// *************************************************************************
 
-// var i = 0;
-// outerFor: do {
-	// console.log("outer i =", i);
-	// do {
-		// i++;
-		// console.log("inner i =", i);
-		// if (i > 10) {
-			// break outerFor;
-		// }
-	// } while (true);
-// } while(true);
+var baseArray = [];
+var i,j;
 
-// outerFor: for (var i= 0;;) {
-	// console.log("outer=",i);
-	// for (;;) {
-		// i++;
-		// console.log("inner i=", i);
-		// if (i > 10) {
-			// break outerFor;
-		// }
-	// }
-// }
+for( i = 1; i < 100; i++) {
+	baseArray[i] = i;
+}
 
+var newArray1 = [];
+var newArray2 = [];
+var newArray3 = [];
 
-// outer: for (var i = 0; i < 1000;) {
-	// console.log("outer i", i);
-	// for (;;) {
-		// i++;
-		// console.log("inner i =", i);
-		// if (i > 10) {
-			// continue outer;
-		// }
-	// }
-// }
-
-
-// var i = 0;
-// outer: while (i<30) {
-	// console.log("outer i=", i);
-	// while (true) {
-		// console.log("inner i=", i);
-		// i++;
-		// if (i > 10) {
-			// continue outer;
-		// }
-	// }
-// }
-
-// var i = 0;
-
-// outer: do {
-	// console.log("outer i=", i);
-	// do {
-		// i++;
-		// console.log("inner i=", i);
-		// if (i > 10) {
-			// continue outer;
-		// }
-	// } while (true);
-// } while (i < 30);
-// ***************************************************
-
-// var object = {
-	// key1: "value 1",
-	// key2: "value 2",
-	// key3: "value 3",
-	// anyKeyName: "ane data",
-	// isObject: {
-		// test: "test"
-	// },
-	// isArray: [1,2,null]
-// }
-
-// console.log(object.key1);
-// console.log(object["key2"]);
-
-
-// for (var key in object) {
-	// console.log(key);
-	// console.log(object[key]);
+for( i = 1, j = 1; i < 100; i++) {
 	
-// }
-
-// ***************************************************
-
-// var array = [1,2,3,"string", null];
-
-// array.someKey = "some value"; //discrease speed of work with array
-// // index of 1 is 0
-
-// for (var index in array) {
-	// console.log(index);
-	// console.log(array[index]);
-	
-// }
-
-// ***************************************************
-
-
-// // массивы
-// // arrays definition
-// // var array = [1,2,3,"string", null];
-// var arr = [];
-// var arr = [1,"string", null];
-// var arr = new Array (); // []
-// var arr = new Array (1,"string", null);
-// var arr = new Array(2); // [undefined, undefined];
-
-// console.log(arr.length);
-// console.log(arr[0]);
-// console.log(arr);
-
-// arr[0] = "test";
-// console.log(arr[0]);
-// arr{0} = "rest";
-
-// ***************************************************
-
-// var arr = [1,2,3];
-// console.log(arr.length); // 3
-// console.log(arr.push(10)); // 4
-// console.log(arr.length); // 4
-// arr.push("test") > 4 ? console.log("We have a big array!") : null;
-// arr.push("test") > 4 && console.log("We have a big array!");
-// var newLength = arr.push("rest");
-// console.log(newLength);
-
-// var z;
-// if (z = 8> 6) {
-	// console.log("z = 8 > 6 =", z);
-// }
-// console.log("Our array =", arr);
-// ***************************************************
-
-// var arr = [1,2,3];
-// console.log(Array.isArray(arr));
-
-// ***************************************************
-
-// var array = ["text", 123, {}, [], null];
-// for (var i = 0; i < array.length; i++) {
-	// var currentElement = array[i];
-	// if (typeof currentElement == "object") {
-		// console.log(currentElement);
-		// break;
-	// }
-	// console.log("iteration =", i+1);
-// }
-
-
-// var array = ["text", 123, [], {}, null];
-// var newArray = [];
-// for (var i = 0; i < array.length; i++) {
-	// var currentElement = array[i];
-	// if (typeof currentElement != "object" && typeof currentElement != "function" || currentElement === null {
-		// neaArray.push(currentElement);
-	// }
-	// console.log("iteration =", i+1);
-// }
-
-// var array = ["text", 123, [], {}, null];
-// array.length = 0;
-// console.log(array);
-
-
-// var array = ["text", 123, [], {}, null];
-// array.length = 10;
-// console.log(array);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	newArray1[j] = baseArray[i];
+	i++;
+	newArray2[j] = baseArray[i];
+	i++;
+	newArray3[j] = baseArray[i];
+	j++;
+}
+
+console.log(newArray1, newArray2, newArray3);
+
+// *************************************************************************
